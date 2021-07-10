@@ -1,0 +1,38 @@
+.get-started {
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  background: linear-gradient(
+    to right,
+    hsl(176, 68%, 64%) 5%,
+    hsl(198, 60%, 50%) 100%
+  );
+  border-radius: 28px;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 16px 74px;
+  text-decoration: none;
+}
+.for-free {
+  background: linear-gradient(
+    to right,
+    hsl(176, 68%, 64%) 5%,
+    hsl(198, 60%, 50%) 100%
+  );
+  border-radius: 28px;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 16px 74px;
+  text-decoration: none;
+  height: 2.5rem;
+
+  width: 100%;
+}

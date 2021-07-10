@@ -1,0 +1,52 @@
+//Fonts
+$font-stack-body: "Open Sans", sans-serif;
+$font-stack-heading: "Raleway", sans-serif;
+
+//Colors
+$primary-main: hsl(218, 28%, 13%);
+$primary-intro: hsl(217, 28%, 15%);
+$primary-footer: hsl(216, 53%, 9%);
+$primary-testimonial: hsl(219, 30%, 18%);
+$neutral: hsl(0, 0%, 100%);
+
+$error-color: hsl(0, 100%, 63%);
+
+//Set text color based on bg
+@function set-text-color($color) {
+  @if (lightness($color) > 70) {
+    @return #333;
+  } @else {
+    @return #fff;
+  }
+}
+
+//Set background & text color
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}
+
+//Breakpoints
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: 70em) {
+      @content;
+    }
+  } @else if $point == laptop {
+    @media (min-width: 64em) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media (min-width: 50em) {
+      @content;
+    }
+  } @else if $point == phablet {
+    @media (min-width: 37.5em) {
+      @content;
+    }
+  } @else if $point == mobileonly {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+}
